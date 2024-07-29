@@ -47,20 +47,11 @@
             "$ref": "#/definitions/Artifact"
           }
         },
-        "container": {
-          "type": "boolean"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "recursive": {
-          "type": "boolean"
-        },
         "statusinfo": {
           "$ref": "#/definitions/StatusInfo"
+        },
+        "clientinfo": {
+          "$ref": "#/definitions/ClientInfo"
         }
       }
     },
@@ -174,6 +165,44 @@
         },
         "shouldbeprocessed": {
           "type": "boolean"
+        }
+      }
+    },
+    "ClientInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "mimetype": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shortname": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fullname": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "iscontainer": {
+          "type": "boolean"
+        },
+        "recursive": {
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     },
@@ -371,6 +400,9 @@
         "null"
       ],
       "properties": {
+        "serverside": {
+          "type": "boolean"
+        },
         "overwrite": {
           "type": "boolean"
         },
