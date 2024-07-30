@@ -307,6 +307,18 @@
         },
         "actionflattensignatures": {
           "type": "boolean"
+        },
+        "extensionsfilter": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         }
       }
     },
@@ -443,29 +455,6 @@
         },
         "output": {
           "$ref": "#/definitions/Artifact"
-        }
-      }
-    },
-    "Processor": {
-      "type": [
-        "object",
-        "null"
-      ],
-      "properties": {
-        "extensionsfilter": {
-          "type": [
-            "array",
-            "null"
-          ],
-          "items": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "builder": {
-          "$ref": "#/definitions/DocBuilder"
         }
       }
     },
@@ -1843,7 +1832,7 @@
         "null"
       ],
       "items": {
-        "$ref": "#/definitions/Processor"
+        "$ref": "#/definitions/DocBuilder"
       }
     },
     "mergesettings": {
@@ -1855,7 +1844,7 @@
         "null"
       ],
       "items": {
-        "$ref": "#/definitions/Processor"
+        "$ref": "#/definitions/DocBuilder"
       }
     },
     "signatures": {
