@@ -981,6 +981,9 @@
         },
         "continueonerror": {
           "type": "boolean"
+        },
+        "deleteoriginalonsuccess": {
+          "type": "boolean"
         }
       }
     },
