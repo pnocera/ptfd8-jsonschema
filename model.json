@@ -705,6 +705,23 @@
         },
         "autorotateimages": {
           "type": "boolean"
+        },
+        "resolution": {
+          "type": "integer"
+        },
+        "ocrdevice": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "pdfocr8",
+            "pdfocr24",
+            "pdfocr32"
+          ]
+        },
+        "downscalefactor": {
+          "type": "integer"
         }
       }
     },
