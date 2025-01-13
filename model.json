@@ -112,6 +112,28 @@
         }
       }
     },
+    "ArtifactS3": {
+      "title": "ArtifactS3",
+      "description": "Represents an s3 artifact.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "bucket": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "s3id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
     "Asset": {
       "title": "Asset",
       "description": "Represents any asset.",
@@ -151,6 +173,12 @@
         "artifactnats": {
           "$ref": "#/definitions/ArtifactNATS"
         },
+        "artifacts3": {
+          "$ref": "#/definitions/ArtifactS3"
+        },
+        "credentials": {
+          "$ref": "#/definitions/AssetCredentials"
+        },
         "mimetype": {
           "type": [
             "string",
@@ -164,6 +192,47 @@
           ]
         },
         "shouldbeprocessed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "AssetCredentials": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "locator": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accesskey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "secretkey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "token": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "usessl": {
           "type": "boolean"
         }
       }
