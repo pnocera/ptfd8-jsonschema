@@ -2038,10 +2038,5 @@
     "defaultstoresettingsnats": {
       "$ref": "#/definitions/StoreSettingsNATS"
     }
-  },
-  "required": [
-    "defaultstoresettingscontentserver",
-    "defaultstoresettingss3",
-    "defaultstoresettingsnats"
-  ]
+  }
 }
