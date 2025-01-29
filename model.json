@@ -61,8 +61,8 @@
         "null"
       ],
       "properties": {
-        "settingscontentserver": {
-          "$ref": "#/definitions/SettingsContentServer"
+        "storesettingscontentserver": {
+          "$ref": "#/definitions/StoreSettingsContentServer"
         },
         "parentid": {
           "type": "integer"
@@ -98,6 +98,9 @@
         "null"
       ],
       "properties": {
+        "storesettingsnats": {
+          "$ref": "#/definitions/StoreSettingsNATS"
+        },
         "natsid": {
           "type": [
             "string",
@@ -120,6 +123,9 @@
         "null"
       ],
       "properties": {
+        "storesettingss3": {
+          "$ref": "#/definitions/StoreSettingsS3"
+        },
         "bucket": {
           "type": [
             "string",
@@ -127,6 +133,23 @@
           ]
         },
         "s3id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "ArtifactSharepoint": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "storesettingssharepoint": {
+          "$ref": "#/definitions/StoreSettingsSharepoint"
+        },
+        "sharepointid": {
           "type": [
             "string",
             "null"
@@ -176,8 +199,8 @@
         "artifacts3": {
           "$ref": "#/definitions/ArtifactS3"
         },
-        "credentials": {
-          "$ref": "#/definitions/AssetCredentials"
+        "artifactsharepoint": {
+          "$ref": "#/definitions/ArtifactSharepoint"
         },
         "mimetype": {
           "type": [
@@ -192,47 +215,6 @@
           ]
         },
         "shouldbeprocessed": {
-          "type": "boolean"
-        }
-      }
-    },
-    "AssetCredentials": {
-      "type": [
-        "object",
-        "null"
-      ],
-      "properties": {
-        "locator": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "accesskey": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "secretkey": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "token": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "region": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "usessl": {
           "type": "boolean"
         }
       }
@@ -544,55 +526,6 @@
             "string",
             "null"
           ]
-        }
-      }
-    },
-    "SettingsContentServer": {
-      "type": [
-        "object",
-        "null"
-      ],
-      "properties": {
-        "url": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "tlsversion": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "enum": [
-            "SystemDefault",
-            "Ssl3",
-            "Tls",
-            "Tls11",
-            "Tls12",
-            "Tls13"
-          ]
-        },
-        "userlogin": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "password": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "sessiontimeout": {
-          "type": "integer"
-        },
-        "httptimeout": {
-          "type": "integer"
-        },
-        "convertfilenamestocstags": {
-          "type": "boolean"
         }
       }
     },
@@ -1543,6 +1476,154 @@
         }
       }
     },
+    "StoreSettingsContentServer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tlsversion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "SystemDefault",
+            "Ssl3",
+            "Tls",
+            "Tls11",
+            "Tls12",
+            "Tls13"
+          ]
+        },
+        "userlogin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "password": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sessiontimeout": {
+          "type": "integer"
+        },
+        "httptimeout": {
+          "type": "integer"
+        },
+        "convertfilenamestocstags": {
+          "type": "boolean"
+        }
+      }
+    },
+    "StoreSettingsNATS": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publickey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "privatekey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "servername": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inmemory": {
+          "type": "boolean"
+        }
+      }
+    },
+    "StoreSettingsS3": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accesskey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "secretkey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "usessl": {
+          "type": "boolean"
+        }
+      }
+    },
+    "StoreSettingsSharepoint": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "siteurl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "clientid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "clientsecret": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chunksize": {
+          "type": "integer"
+        }
+      }
+    },
     "TaskDef": {
       "type": [
         "object",
@@ -1947,6 +2028,20 @@
     },
     "output": {
       "$ref": "#/definitions/Artifact"
+    },
+    "defaultstoresettingscontentserver": {
+      "$ref": "#/definitions/StoreSettingsContentServer"
+    },
+    "defaultstoresettingss3": {
+      "$ref": "#/definitions/StoreSettingsS3"
+    },
+    "defaultstoresettingsnats": {
+      "$ref": "#/definitions/StoreSettingsNATS"
     }
-  }
+  },
+  "required": [
+    "defaultstoresettingscontentserver",
+    "defaultstoresettingss3",
+    "defaultstoresettingsnats"
+  ]
 }
