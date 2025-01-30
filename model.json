@@ -86,9 +86,6 @@
             "string",
             "null"
           ]
-        },
-        "fsdocumentsavestrategy": {
-          "$ref": "#/definitions/FSDocumentSaveStrategy"
         }
       }
     },
@@ -440,24 +437,7 @@
         }
       }
     },
-    "Dum": {
-      "type": [
-        "object",
-        "null"
-      ],
-      "properties": {
-        "wfrun": {
-          "$ref": "#/definitions/WorkflowRun"
-        },
-        "pipelinestatus": {
-          "$ref": "#/definitions/PipelineStatus"
-        },
-        "taskdef": {
-          "$ref": "#/definitions/TaskDef"
-        }
-      }
-    },
-    "FSDocumentSaveStrategy": {
+    "DocumentSaveStrategy": {
       "type": [
         "object",
         "null"
@@ -480,6 +460,26 @@
             "string",
             "null"
           ]
+        },
+        "samefolderasoriginal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Dum": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "wfrun": {
+          "$ref": "#/definitions/WorkflowRun"
+        },
+        "pipelinestatus": {
+          "$ref": "#/definitions/PipelineStatus"
+        },
+        "taskdef": {
+          "$ref": "#/definitions/TaskDef"
         }
       }
     },
@@ -2037,6 +2037,12 @@
     },
     "defaultstoresettingsnats": {
       "$ref": "#/definitions/StoreSettingsNATS"
+    },
+    "defaultstoresettingssharepoint": {
+      "$ref": "#/definitions/StoreSettingsSharepoint"
+    },
+    "defaultdocumentsavestrategy": {
+      "$ref": "#/definitions/DocumentSaveStrategy"
     }
   }
 }
