@@ -72,6 +72,21 @@
         },
         "vernum": {
           "type": "integer"
+        },
+        "subtype": {
+          "type": "integer"
+        },
+        "mimetype": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     },
