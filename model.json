@@ -531,7 +531,7 @@
       ],
       "properties": {
         "cadforcelineweight": {
-          "type": "boolean"
+          "type": "number"
         },
         "cadblackwhite": {
           "type": "boolean"
