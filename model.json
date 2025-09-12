@@ -232,11 +232,26 @@
       }
     },
     "ClientInfo": {
+      "title": "Client Information",
+      "description": "Provides context about the client or source system requesting the operation.",
       "type": [
         "object",
         "null"
       ],
       "properties": {
+        "id": {
+          "description": "Unique identifier for the client or source item.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parentid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "mimetype": {
           "type": [
             "string",
@@ -382,6 +397,12 @@
               "null"
             ]
           }
+        },
+        "frontpage": {
+          "$ref": "#/definitions/Artifact"
+        },
+        "lastpage": {
+          "$ref": "#/definitions/Artifact"
         }
       }
     },
@@ -516,11 +537,24 @@
             "null"
           ]
         },
+        "correlationid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "statusinfo": {
           "$ref": "#/definitions/StatusInfo"
         },
         "output": {
           "$ref": "#/definitions/Artifact"
+        },
+        "customdata": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
         }
       }
     },
@@ -789,16 +823,16 @@
           ]
         },
         "margintop": {
-          "type": "integer"
+          "type": "number"
         },
         "marginleft": {
-          "type": "integer"
+          "type": "number"
         },
         "marginbottom": {
-          "type": "integer"
+          "type": "number"
         },
         "marginright": {
-          "type": "integer"
+          "type": "number"
         },
         "width": {
           "type": "number"
@@ -1471,6 +1505,12 @@
             "null"
           ]
         },
+        "correlationid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "errordetails": {
           "type": [
             "array",
@@ -1662,6 +1702,18 @@
             "WordBook",
             "Ocr",
             "Print"
+          ]
+        },
+        "correlationid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pipelinecorrelationid": {
+          "type": [
+            "string",
+            "null"
           ]
         },
         "runid": {
@@ -1996,6 +2048,18 @@
         "Print"
       ]
     },
+    "correlationid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parentcorrelationid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "merge": {
       "type": "boolean"
     },
@@ -2058,6 +2122,13 @@
     },
     "defaultdocumentsavestrategy": {
       "$ref": "#/definitions/DocumentSaveStrategy"
+    },
+    "customdata": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {}
     }
   }
 }
