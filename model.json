@@ -398,6 +398,9 @@
             ]
           }
         },
+        "keepdocumentinprocessonerror": {
+          "type": "boolean"
+        },
         "frontpage": {
           "$ref": "#/definitions/Artifact"
         },
