@@ -296,6 +296,9 @@
         "settingsocr": {
           "$ref": "#/definitions/SettingsOCR"
         },
+        "settingsocraspose": {
+          "$ref": "#/definitions/SettingsOCRAspose"
+        },
         "settingsmergemeta": {
           "$ref": "#/definitions/SettingsMergeMeta"
         },
@@ -398,14 +401,21 @@
             ]
           }
         },
-        "keepdocumentinprocessonerror": {
-          "type": "boolean"
-        },
         "frontpage": {
           "$ref": "#/definitions/Artifact"
         },
         "lastpage": {
           "$ref": "#/definitions/Artifact"
+        },
+        "ocrengine": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Tesseract",
+            "AsposeOCR"
+          ]
         }
       }
     },
@@ -776,6 +786,63 @@
         },
         "downscalefactor": {
           "type": "integer"
+        }
+      }
+    },
+    "SettingsOCRAspose": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "setbinarizationtreshold": {
+          "type": "number"
+        },
+        "correctskew": {
+          "type": "boolean"
+        },
+        "removenoise": {
+          "type": "boolean"
+        },
+        "autocontrast": {
+          "type": "boolean"
+        },
+        "tograyscale": {
+          "type": "boolean"
+        },
+        "rotateangle": {
+          "type": "number"
+        },
+        "scaleratio": {
+          "type": "number"
+        },
+        "resizewidth": {
+          "type": "number"
+        },
+        "resizeheight": {
+          "type": "number"
+        },
+        "invertcolors": {
+          "type": "boolean"
+        },
+        "dilate": {
+          "type": "boolean"
+        },
+        "applymedianfilter": {
+          "type": "boolean"
+        },
+        "pdfoptimizationmode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "NONE",
+            "MAXIMUM_QUALITY",
+            "HIGH_QUALITY",
+            "BALANCED",
+            "AGGRESSIVE"
+          ]
         }
       }
     },
