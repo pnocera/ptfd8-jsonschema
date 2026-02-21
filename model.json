@@ -755,6 +755,9 @@
         },
         "wordtrackchanges": {
           "type": "boolean"
+        },
+        "exportmeta": {
+          "type": "boolean"
         }
       }
     },
@@ -1824,6 +1827,13 @@
         },
         "statusinfo": {
           "$ref": "#/definitions/StatusInfo"
+        },
+        "customdata": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {}
         }
       }
     },
