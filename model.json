@@ -389,7 +389,19 @@
         "actionflattensignatures": {
           "type": "boolean"
         },
-        "extensionsfilter": {
+        "extensionsfilterout": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "extensionsfilteraccept": {
           "type": [
             "array",
             "null"
